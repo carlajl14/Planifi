@@ -1,0 +1,9 @@
+{% extends 'layout/base.html' %}
+{% block 'title' %}Inicio{% endblock %}
+{% block 'header' %}
+    {% include 'layout/partials/header.html' %}
+{% endblock %}
+{% block 'content' %}
+    <h1>Inicia sesión para acceder a planifi</h1>
+    {% include 'login/index.html' %}
+{% endblock %}

@@ -1,0 +1,49 @@
+/* Estilo general para la estructura */
+.dashboard-container {
+    display: flex;
+}
+
+/* Estilo para el sidebar (navegación) */
+.sidebar {
+    width: 200px;  /* Ajusta el ancho del sidebar */
+    background-color: #333;  /* Color de fondo del sidebar */
+    color: white;  /* Color de los textos */
+    height: 100vh;  /* Altura completa de la ventana */
+    padding-top: 20px;
+    position: fixed;  /* Fijado a la izquierda */
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding-left: 0;
+    /* display: flex; */
+}
+
+.sidebar li {
+    padding: 10px;
+    text-align: center;
+    display: flex;
+    margin-left: 15px;
+}
+
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    margin-left: 10px;
+}
+
+.sidebar a:hover {
+    background-color: #575757;  /* Efecto hover */
+}
+
+/* Estilo para el contenido principal */
+.main-content {
+    margin-left: 220px;  /* Espacio para el sidebar */
+    padding: 20px;
+    width: calc(100% - 220px);  /* Resto del espacio para el contenido */
+}
+
+.main-content h1 {
+    color: #333;
+}

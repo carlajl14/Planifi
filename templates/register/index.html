@@ -1,0 +1,32 @@
+{% extends 'layout/base.html' %}
+{% block 'title' %}Registrate{% endblock %}
+{% block 'header' %}
+    {% include 'register/partials/header.html' %}
+{% endblock %}
+{% block 'content' %}
+    <h3>Registrate</h3>
+    {% if messages %}
+        <div class="alert" role="alert">
+            {% for message in messages %}
+                <li {% if message.tags %} class="alert-success" style="color: green;" {% endif %}>{{ message }}</li>
+            {% endfor %}
+        </div>
+    {% endif %}
+    <form action="{% url 'register' %}" method="post">
+        {% csrf_token %}
+        <div>
+            Username: {{ form.username }}
+        </div>
+        <div>
+            Email: {{ form.email }}
+        </div>
+        <div>
+            Contraseña: {{ form.password1 }}
+        </div>
+        <div>
+            Repetir contraseña: {{ form.password2 }}
+        </div>
+        
+        <input type="submit" value="Registrate">
+    </form>
+{% endblock %}
